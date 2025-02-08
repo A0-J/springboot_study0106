@@ -51,12 +51,11 @@ tasks.withType(JavaCompile) {
 
 // 실행 가능한 JAR 생성 설정 (Spring Boot의 bootJar 사용)
 bootJar {
-    archiveBaseName = 'qiena.book.springboot'  // JAR 파일 이름
+    archiveBaseName = 'springboot_study0106'  // JAR 파일 이름
     version = '1.0-SNAPSHOT'
     manifest {
         attributes(
-                'Main-Class': 'org.springframework.boot.loader.JarLauncher',  // 부트 로더 지정
-                'Start-Class': 'com.qiena.book.springboot.Application'           // 실제 애플리케이션의 진입점
+                'Main-Class': 'com.qiena.book.springboot.Application'           // 실제 애플리케이션의 진입점
         )
     }
 }
