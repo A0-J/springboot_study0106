@@ -64,3 +64,10 @@ bootJar {
 jar {
     enabled = false
 }
+
+// JAR 빌드 시 클래스 포함 여부 확인
+tasks.withType<Jar> {
+    from {
+        configurations.runtimeClasspath.get().filter { it.exists() }.map { if (it.isDirectory) it else zipTree(it) }
+    }
+}
