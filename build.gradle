@@ -51,7 +51,7 @@ tasks.withType(JavaCompile) {
 
 // 실행 가능한 JAR 생성 설정
 bootJar {
-    archiveBaseName = 'firstproject'  // JAR 파일 이름
+    archiveBaseName = 'qiena.book.spingboot'  // JAR 파일 이름
     version = '1.0-SNAPSHOT'
     manifest {
         attributes(
