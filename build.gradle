@@ -49,9 +49,9 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-// 실행 가능한 JAR 생성 설정
+// 실행 가능한 JAR 생성 설정 (Spring Boot의 bootJar 사용)
 bootJar {
-    archiveBaseName = 'qiena.book.springboot'
+    archiveBaseName = 'qiena.book.springboot'  // JAR 파일 이름
     version = '1.0-SNAPSHOT'
     manifest {
         attributes(
@@ -61,7 +61,7 @@ bootJar {
     }
 }
 
+// plain JAR 비활성화
 jar {
     enabled = false
 }
-
